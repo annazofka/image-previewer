@@ -9,7 +9,6 @@
     <title>Document</title>
     <style>
       .prev-button {
-        /* display: none; */
         position: absolute;
         top: 50vh;
         left: 5vw;
@@ -18,7 +17,6 @@
       }
 
       .next-button {
-        /* display: none; */
         position: absolute;
         top: 50vh;
         right: 5vw;
@@ -47,6 +45,10 @@
         right: 0;
       }
 
+      .hide {
+        display: none;
+      }
+
       .backdrop img {
         position: fixed;
         top: 50vh;
@@ -58,16 +60,17 @@
   </head>
   <body>
     <main class="container">
-      <article>
+      <article id="image-list">
         <img width="200" id="0" src="./assets/0.jpg" alt="" />
         <img width="200" id="1" src="./assets/1.jpg" alt="" />
         <img width="200" id="2" src="./assets/2.jpg" alt="" />
       </article>
-      <button class="close-button">&times;</button>
-      <button class="prev-button">←</button>
-      <button class="next-button">→</button>
-      <div class="backdrop">
-        <img src="./assets/0.jpg" alt="" />
+
+      <div class="backdrop hide" id="backdrop">
+        <button class="close-button" id="close-button">&times;</button>
+        <button class="prev-button" id="prev-button">←</button>
+        <button class="next-button" id="next-button">→</button>
+        <img id="image-previewer" src="./assets/0.jpg" alt="" />
       </div>
     </main>
     <script src="./script.js"></script>
