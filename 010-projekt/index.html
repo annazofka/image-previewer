@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    /> -->
+    <title>Document</title>
+    <style>
+      .prev-button {
+        /* display: none; */
+        position: absolute;
+        top: 50vh;
+        left: 5vw;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      .next-button {
+        /* display: none; */
+        position: absolute;
+        top: 50vh;
+        right: 5vw;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      .close-button {
+        color: white;
+        border: none;
+        background-color: transparent;
+        position: fixed;
+        top: 5vh;
+        right: 5vw;
+        font-size: 40px;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      .backdrop {
+        background-color: #00000099;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .backdrop img {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <img width="200" id="0" src="./assets/0.jpg" alt="" />
+        <img width="200" id="1" src="./assets/1.jpg" alt="" />
+        <img width="200" id="2" src="./assets/2.jpg" alt="" />
+      </article>
+      <button class="close-button">&times;</button>
+      <button class="prev-button">←</button>
+      <button class="next-button">→</button>
+      <div class="backdrop">
+        <img src="./assets/0.jpg" alt="" />
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
